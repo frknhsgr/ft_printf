@@ -6,7 +6,7 @@
 /*   By: fhosgor <fhosgor@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 18:00:16 by fhosgor           #+#    #+#             */
-/*   Updated: 2023/10/22 16:13:03 by fhosgor          ###   ########.fr       */
+/*   Updated: 2024/10/24 17:16:50 by fhosgor          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,11 @@ int	ft_check(char c, va_list ap)
 		return (ft_printp(va_arg(ap, unsigned long), 1));
 	else
 		return (0);
+}
+
+int	ft_putchar(char c)
+{
+	return (write(1, &c, 1));
 }
 
 int	ft_printf(const char *str, ...)
